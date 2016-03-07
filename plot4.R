@@ -4,6 +4,8 @@ png("plot4.png", width=480, height=480)
 
 par(mfrow = c(2, 2)) 
 
+datetime <- strptime(paste(subsetdata$Date, subsetdata$Time, sep=" "), "%d/%m/%Y %H:%M:%S")
+
 plot(datetime,subsetdata$Global_active_power,type = "l",ylab="Global Active Power(kilowatts)",xlab="")
 
 plot(datetime,subsetdata$Voltage,type = "l",ylab="Voltage",xlab="datetime")
